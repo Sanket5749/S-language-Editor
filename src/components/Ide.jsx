@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { compiler, runner } from "../compiler";
+import { compiler, runner } from "../Compiler";
 import { Link } from "react-router-dom";
 import Rendering from "./Rendering";
 
