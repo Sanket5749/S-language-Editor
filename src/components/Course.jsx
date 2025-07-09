@@ -127,11 +127,6 @@ export default function Course() {
           <h1 className="text-4xl font-bold text-blue-400 mb-6">
             S language Full Course
           </h1>
-
-          <p className="mb-6 text-lg">
-            Learn S language from basics.
-          </p>
-
           <div className="space-y-6 text-sm">
             {modules.map((mod, index) => (
               <section key={index} className="bg-gray-900 p-4 rounded shadow">
