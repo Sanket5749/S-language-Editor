@@ -15,40 +15,40 @@ export default function Basics() {
     return () => clearTimeout(timer);
   }, []);
 
-  const code = `// 🔠 Declare variables
+  const code = `// Declare variables
 banao x = 10;
 banao name = "Sanket";
 
-// 🖨️ Print output
+// Print output
 dikhao x;
 dikhao "Hi!";
 dikhao name;
 
-// ➕ Concatenation
+// Concatenation
 dikhao "Hi, " + name;
 dikhao name + " is learning S Lang";
 
-// 💬 Comments
+// Comments
 // This line explains what the code does
 
-// ❓ Conditionals
+// Conditionals
 yadi x > 5 {
   dikhao "x is greater than 5";
 } nahito {
   dikhao "x is 5 or less";
 }
 
-// 🔁 Loops
+// Loops
 banao i;
 jabtak i = 0; i < 5; i++ {
   dikhao "Iteration " + i;
 }
 
-// 🧮 Arrays
+// Arrays
 banao fruits = ["apple", "banana", "cherry"];
 dikhao fruits[0];
 
-// 🧪 Functions
+// Functions
 kaam greet(person) {
   dikhao "Hi, " + person;
 }
