@@ -57,7 +57,7 @@ function lexer(input) {
         word += char;
         char = input[++current];
       }
-      const keywords = ["ye", "bol", "agar", "warna", "chakkar", "kaam"];
+      const keywords = ["banao", "dikhao", "yadi", "nahito", "jabtak", "kaam"];
       tokens.push({
         type: keywords.includes(word) ? "keyword" : "identifier",
         value: word,
@@ -97,7 +97,7 @@ function parser(tokens) {
   function walk() {
     const token = tokens.shift();
 
-    if (token?.type === "keyword" && token.value === "ye") {
+    if (token?.type === "keyword" && token.value === "banao") {
       const name = tokens.shift().value;
       let value = null;
       if (tokens[0]?.value === "=") {
@@ -115,7 +115,7 @@ function parser(tokens) {
       return { type: "Declaration", name, value };
     }
 
-    if (token?.type === "keyword" && token.value === "bol") {
+    if (token?.type === "keyword" && token.value === "dikhao") {
       let expression = "";
       while (tokens[0]?.value !== ";") {
         expression += parseTokenValue(tokens.shift());
@@ -124,7 +124,7 @@ function parser(tokens) {
       return { type: "Print", expression: expression.trim() };
     }
 
-    if (token?.type === "keyword" && token.value === "agar") {
+    if (token?.type === "keyword" && token.value === "yadi") {
       let condition = "";
       while (tokens[0]?.value !== "{") {
         condition += parseTokenValue(tokens.shift());
@@ -138,7 +138,7 @@ function parser(tokens) {
       tokens.shift(); 
 
       const elseBlock = [];
-      if (tokens[0]?.type === "keyword" && tokens[0].value === "warna") {
+      if (tokens[0]?.type === "keyword" && tokens[0].value === "nahito") {
         tokens.shift(); 
         tokens.shift(); 
         while (tokens[0]?.value !== "}") {
@@ -155,7 +155,7 @@ function parser(tokens) {
       };
     }
 
-    if (token?.type === "keyword" && token.value === "chakkar") {
+    if (token?.type === "keyword" && token.value === "jabtak") {
       let init = "",
         cond = "",
         incr = "";

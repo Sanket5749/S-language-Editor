@@ -46,7 +46,7 @@ export default function Ide() {
           </h2>
 
           <p className="mb-4 text-white">
-            New to S{" "}
+            New to Platform{" "}
             <Link
               to="/basics"
               className="text-blue-500 underline hover:text-blue-300"

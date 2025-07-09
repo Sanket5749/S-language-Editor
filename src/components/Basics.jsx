@@ -16,41 +16,41 @@ export default function Basics() {
   }, []);
 
   const code = `// 🔠 Declare variables
-ye x = 10;
-ye name = "Sanket";
+banao x = 10;
+banao name = "Sanket";
 
 // 🖨️ Print output
-bol x;
-bol "Hi!";
-bol name;
+dikhao x;
+dikhao "Hi!";
+dikhao name;
 
 // ➕ Concatenation
-bol "Hi, " + name;
-bol name + " is learning S Lang";
+dikhao "Hi, " + name;
+dikhao name + " is learning S Lang";
 
 // 💬 Comments
 // This line explains what the code does
 
 // ❓ Conditionals
-agar x > 5 {
-  bol "x is greater than 5";
-} warna {
-  bol "x is 5 or less";
+yadi x > 5 {
+  dikhao "x is greater than 5";
+} nahito {
+  dikhao "x is 5 or less";
 }
 
 // 🔁 Loops
-ye i;
-chakkar i = 0; i < 5; i++ {
-  bol "Iteration " + i;
+banao i;
+jabtak i = 0; i < 5; i++ {
+  dikhao "Iteration " + i;
 }
 
 // 🧮 Arrays
-ye fruits = ["apple", "banana", "cherry"];
-bol fruits[0];
+banao fruits = ["apple", "banana", "cherry"];
+dikhao fruits[0];
 
 // 🧪 Functions
 kaam greet(person) {
-  bol "Hi, " + person;
+  dikhao "Hi, " + person;
 }
 greet("Sanket");`;
 
@@ -69,10 +69,10 @@ greet("Sanket");`;
       {showSplash && <SplashScreen />}
       {!showSplash && (
         <div className="min-h-screen bg-black p-6 font-mono text-white">
-          <h2 className="text-3xl font-bold mb-6 text-blue-400">S Lang Basics</h2>
+          <h2 className="text-3xl font-dikhaod mb-6 text-blue-400">S language Basics</h2>
 
           <p className="mb-4">
-            Ready to use S{" "}
+            Ready to use it{" "}
             <Link
               to="/"
               className="text-blue-500 underline hover:text-blue-300"

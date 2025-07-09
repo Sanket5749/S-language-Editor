@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Rendering from "./Rendering";
 
@@ -9,14 +10,14 @@ function SplashScreen() {
 const modules = [
   {
     title: "Module: Variable Declaration",
-    color: "text-yellow-300",
+    color: "text-banaollow-300",
     topics: [
       {
-        name: "Using `ye`",
+        name: "Using `banao`",
         definition:
           "Declare variables for storing numbers, strings, or arrays.",
-        syntax: "`ye x = 10;`",
-        example: '`ye name = "Sanket";`',
+        syntax: "`banao x = 10;`",
+        example: '`banao name = "Sanket";`',
       },
     ],
   },
@@ -25,10 +26,10 @@ const modules = [
     color: "text-blue-300",
     topics: [
       {
-        name: "Using `bol`",
+        name: "Using `dikhao`",
         definition: "Display messages or variable values in the console.",
-        syntax: "`bol x;`",
-        example: '`bol "Hi!";`',
+        syntax: "`dikhao x;`",
+        example: '`dikhao "Hi!";`',
       },
     ],
   },
@@ -40,8 +41,8 @@ const modules = [
         name: "String Joining",
         definition:
           "Join multiple strings or variables using the `+` operator.",
-        syntax: '`bol "Hello, " + name;`',
-        example: '`bol name + " is learning S Lang";`',
+        syntax: '`dikhao "Hello, " + name;`',
+        example: '`dikhao name + " is learning S Lang";`',
       },
     ],
   },
@@ -65,10 +66,10 @@ const modules = [
       {
         name: "Decision Making",
         definition:
-          "Use `agar` and `warna` to perform logic based on conditions.",
-        syntax: "`agar x > 5 { ... } warna { ... }`",
+          "Use `yadi` and `nahito` to perform logic based on conditions.",
+        syntax: "`yadi x > 5 { ... } nahito { ... }`",
         example:
-          '`agar x > 5 { bol "x is greater than 5"; } warna { bol "x is 5 or less"; }`',
+          '`yadi x > 5 { dikhao "x is greater than 5"; } nahito { dikhao "x is 5 or less"; }`',
       },
     ],
   },
@@ -77,10 +78,10 @@ const modules = [
     color: "text-indigo-300",
     topics: [
       {
-        name: "Using `chakkar`",
+        name: "Using `jabtak`",
         definition: "Repeat a block of code using a counter variable.",
-        syntax: "`chakkar i = 0; i < 5; i++ { ... }`",
-        example: '`bol "Iteration " + i;`',
+        syntax: "`jabtak i = 0; i < 5; i++ { ... }`",
+        example: '`dikhao "Iteration " + i;`',
       },
     ],
   },
@@ -92,8 +93,8 @@ const modules = [
         name: "Array Declaration & Access",
         definition:
           "Store multiple values using `[ ]`, and access them by index.",
-        syntax: '`ye fruits = ["apple", "banana", "cherry"];`',
-        example: "`bol fruits[0];`",
+        syntax: '`banao fruits = ["apple", "banana", "cherry"];`',
+        example: "`dikhao fruits[0];`",
       },
     ],
   },
@@ -105,7 +106,7 @@ const modules = [
         name: "Function Creation",
         definition:
           "Define reusable logic blocks using `kaam` and call them with parameters.",
-        syntax: '`kaam greet(person) { bol "Hi, " + person; }`',
+        syntax: '`kaam greet(person) { dikhao "Hi, " + person; }`',
         example: '`greet("Sanket");`',
       },
     ],
@@ -124,19 +125,20 @@ export default function Course() {
       {showSplash && <SplashScreen />}
       {!showSplash && (
         <div className="min-h-screen bg-black p-6 text-white font-mono">
-          <h1 className="text-4xl font-bold text-blue-400 mb-6">
+          <h1 className="text-4xl font-dikhaod text-blue-400 mb-6">
             S language Full Course
           </h1>
+
           <div className="space-y-6 text-sm">
             {modules.map((mod, index) => (
               <section key={index} className="bg-gray-900 p-4 rounded shadow">
-                <h2 className={`text-xl font-semibold ${mod.color}`}>
+                <h2 className={`text-xl font-semidikhaod ${mod.color}`}>
                   {mod.title}
                 </h2>
                 <div className="mt-4 space-y-3">
                   {mod.topics.map((topic, idx) => (
                     <div key={idx} className="border-l-4 border-gray-700 pl-4">
-                      <h3 className="text-lg font-bold">{topic.name}</h3>
+                      <h3 className="text-lg font-dikhaod">{topic.name}</h3>
                       <p className="text-gray-300 mb-1">
                         <strong>Definition:</strong> {topic.definition}
                       </p>
