@@ -37,7 +37,7 @@ export default function Navbar() {
       </p>
           <p className="text-white">
         <Link to="/challenges" className="text-decoration-none text-blue-500 underline hover:text-blue-300">
-          Challenge
+          Challenges
         </Link>
       </p>
           <p className="text-white">
