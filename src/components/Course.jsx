@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Rendering from "./Rendering";
 
@@ -130,14 +129,7 @@ export default function Course() {
           </h1>
 
           <p className="mb-6 text-lg">
-            Learn S language from basics to mastery. Click{" "}
-            <Link
-              to="/"
-              className="text-blue-500 underline hover:text-blue-300"
-            >
-              here
-            </Link>{" "}
-            to start coding live!
+            Learn S language from basics.
           </p>
 
           <div className="space-y-6 text-sm">
