@@ -65,11 +65,11 @@ export default function SolveChallenge() {
             Level {challenge.level}: {challenge.title}
           </h2>
           <p className="mb-2">{challenge.task}</p>
-          <p className="text-gray-400 mb-4">
+          <p className="text-gray-400">
             <strong>Hint:</strong> {challenge.hint}
           </p>
-          <p className="text-gray-400 mb-4">
-            {challenge.hint}
+          <p className="text-gray-400 mb-3">
+            {challenge.expectedOutput}
           </p>
           <p className="text-right">
             <button
