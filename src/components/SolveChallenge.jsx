@@ -67,7 +67,9 @@ export default function SolveChallenge() {
           <p className="mb-2">{challenge.task}</p>
           <p className="text-gray-400 mb-4">
             <strong>Hint:</strong> {challenge.hint}
-            <strong>Hint:</strong> {challenge.expectedOutput}
+          </p>
+          <p className="text-gray-400 mb-4">
+            {challenge.hint}
           </p>
           <p className="text-right">
             <button
