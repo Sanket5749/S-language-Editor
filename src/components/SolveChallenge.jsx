@@ -68,7 +68,6 @@ export default function SolveChallenge() {
           <p className="text-gray-400">
             <strong>Hint:</strong> {challenge.hint}
           </p>
-         <br />
           <p className="text-gray-400">
             <strong>Expected Output:</strong> {challenge.expectedOutput}
           </p>
