@@ -1,10 +1,8 @@
-import React, { useState } from "react";
 import { motion, useScroll } from "motion/react";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const { scrollYProgress } = useScroll();
-  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div>
@@ -26,25 +24,29 @@ export default function Navbar() {
       <nav className="bg-dark shadow-md text-white">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
           <p className="text-white">
-        <Link to="/" className="text-decoration-none text-blue-500 underline hover:text-blue-300">
-          IDE
-        </Link>
-      </p>
+            <Link
+              to="/"
+              className="text-decoration-none text-blue-500 underline hover:text-blue-300"
+            >
+              IDE
+            </Link>
+          </p>
           <p className="text-white">
-        <Link to="/basics" className="text-decoration-none text-blue-500 underline hover:text-blue-300">
-          Basics
-        </Link>
-      </p>
+            <Link
+              to="/challenges"
+              className="text-decoration-none text-blue-500 underline hover:text-blue-300"
+            >
+              Challenge
+            </Link>
+          </p>
           <p className="text-white">
-        <Link to="/challenges" className="text-decoration-none text-blue-500 underline hover:text-blue-300">
-          Challenge
-        </Link>
-      </p>
-          <p className="text-white">
-        <Link to="/course" className="text-decoration-none text-blue-500 underline hover:text-blue-300">
-          Course
-        </Link>
-      </p>
+            <Link
+              to="/course"
+              className="text-decoration-none text-blue-500 underline hover:text-blue-300"
+            >
+              Course
+            </Link>
+          </p>
         </div>
       </nav>
     </div>

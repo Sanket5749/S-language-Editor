@@ -17,6 +17,7 @@ export default function SolveChallenge() {
   const [code, setCode] = useState("// Write your S code here");
   const [output, setOutput] = useState("");
   const [result, setResult] = useState("");
+  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => setShowSplash(false), 2000);
@@ -45,6 +46,15 @@ export default function SolveChallenge() {
   if (!challenge) {
     return <div className="p-6 text-white bg-black">Challenge not found.</div>;
   }
+   const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(code);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    } catch (err) {
+      console.error("Copy failed:", err);
+    }
+  };
 
   return (
     <div>
@@ -58,6 +68,14 @@ export default function SolveChallenge() {
           <p className="text-gray-400 mb-4">
             <strong>Hint:</strong> {challenge.hint}
           </p>
+          <p className="text-right">
+            <button
+              onClick={handleCopy}
+              className="text-sm px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded text-white transition"
+            >
+              {copied ? "✅ Copied!" : "Copy"}
+            </button>
+          </p>
           <textarea
             className="w-full h-64 p-4 bg-gray-900 text-white border border-gray-700 rounded resize-none"
             value={code}
@@ -66,19 +84,19 @@ export default function SolveChallenge() {
 
           <button
             onClick={run}
-            className="mt-4 px-6 py-2 bg-blue-600 rounded hover:bg-blue-700 transition"
+            className="mt-3 px-6 py-2 bg-blue-600 rounded hover:bg-blue-700 transition"
           >
             Run
           </button>
 
-          <h3 className="mt-6 text-lg">Output:</h3>
+          <h3 className="mt-3 text-lg">Output:</h3>
           <pre className="w-full p-4 mt-2 bg-gray-800 text-green-400 rounded shadow-inner whitespace-pre-wrap">
             {output}
           </pre>
 
           {result && (
             <div
-              className={`mt-4 text-lg ${
+              className={`mt-3 text-lg ${
                 result.startsWith("✅") ? "text-green-400" : "text-red-400"
               }`}
             >
