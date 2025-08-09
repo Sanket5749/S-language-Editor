@@ -14,7 +14,7 @@ export default function SolveChallenge() {
   const challenge = challenges.find((c) => c.level === Number(level));
 
   const [showSplash, setShowSplash] = useState(true);
-  const [code, setCode] = useState("// Write your S code here");
+  const [code, setCode] = useState("// Write your SLANG code here");
   const [output, setOutput] = useState("");
   const [result, setResult] = useState("");
   const [copied, setCopied] = useState(false);
@@ -116,3 +116,4 @@ export default function SolveChallenge() {
     </div>
   );
 }
+
