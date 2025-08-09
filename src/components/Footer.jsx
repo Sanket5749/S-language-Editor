@@ -32,7 +32,7 @@ export default function Footer() {
               {teamMembers.map((member, index) => (
                 <div
                   key={index}
-                  className="bg-gray-800 p-6 rounded-lg shadow-lg hover:transform hover:scale-101 transition-all duration-300 place-content-center"
+                  className="bg-gray-800 p-6 rounded-lg shadow-lg hover:transform hover:scale-101 mb-2 transition-all duration-300 place-content-center"
                 >
                   <img
                     src={member.profilePic}
@@ -74,5 +74,6 @@ export default function Footer() {
     </div>
   );
 }
+
 
 
