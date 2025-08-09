@@ -8,7 +8,7 @@ function SplashScreen() {
 }
 
 export default function Ide() {
-  const [code, setCode] = useState(`// Write your S code here`);
+  const [code, setCode] = useState(`// Write your ARCLANG code here`);
   const [output, setOutput] = useState("");
   const [showSplash, setShowSplash] = useState(true);
   const [copied, setCopied] = useState(false);
@@ -40,9 +40,9 @@ export default function Ide() {
     <div>
       {showSplash && <SplashScreen />}
       {!showSplash && (
-        <div className="min-h-screen bg-black p-6 font-mono text-white">
+        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 p-6 font-mono text-white">
           <h2 className="text-3xl font-bold mb-6 text-blue-400">
-            S language Editor
+            SLANG Editor
           </h2>
 
           <p className="mb-4 text-white">
@@ -76,7 +76,7 @@ export default function Ide() {
           </button>
 
           <h3 className="text-lg mt-3 font-semibold text-white">Output:</h3>
-          <pre className="w-full p-4 mt-3 bg-gray-800 text-green-400 rounded shadow-inner whitespace-pre-wrap overflow-auto">
+          <pre className="w-full p-4 mt-3 bg-gray-900 border border-gray-700 text-green-400 rounded shadow-inner whitespace-pre-wrap overflow-auto">
             {output}
           </pre>
         </div>

@@ -19,9 +19,9 @@ export default function ChallengeList() {
     <div>
       {showSplash && <SplashScreen />}
       {!showSplash && (
-        <div className="min-h-screen bg-black text-white p-6 font-mono">
+        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white p-6 font-mono">
           <h2 className="text-3xl font-bold text-blue-400 mb-6">
-            S language Challenges
+            SLANG Challenges
           </h2>
           <div className="grid gap-4">
             {challenges.map((ch) => (

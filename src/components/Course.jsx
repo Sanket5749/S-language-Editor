@@ -17,7 +17,7 @@ const modules = [
         definition:
           "Declare variables for storing numbers, strings, or arrays.",
         syntax: "`banao x = 10;`",
-        example: '`banao name = "Sanket";`',
+        example: '`banao name = "ARCLANG";`',
       },
     ],
   },
@@ -42,7 +42,7 @@ const modules = [
         definition:
           "Join multiple strings or variables using the `+` operator.",
         syntax: '`dikhao "Hello, " + name;`',
-        example: '`dikhao name + " is learning S Lang";`',
+        example: '`dikhao name + " is learning ARCLANG";`',
       },
     ],
   },
@@ -107,7 +107,7 @@ const modules = [
         definition:
           "Define reusable logic blocks using `kaam` and call them with parameters.",
         syntax: '`kaam greet(person) { dikhao "Hi, " + person; }`',
-        example: '`greet("Sanket");`',
+        example: '`greet("ARCLANG");`',
       },
     ],
   },
@@ -124,9 +124,9 @@ export default function Course() {
     <div>
       {showSplash && <SplashScreen />}
       {!showSplash && (
-        <div className="min-h-screen bg-black p-6 text-white font-mono">
+        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 p-6 text-white font-mono">
           <h1 className="text-4xl font-dikhaod text-blue-400 mb-6">
-            S language Full Course
+            SLANG Full Course
           </h1>
 
           <div className="space-y-6 text-sm">
@@ -137,9 +137,9 @@ export default function Course() {
                 </h2>
                 <div className="mt-4 space-y-3">
                   {mod.topics.map((topic, idx) => (
-                    <div key={idx} className="border-l-4 border-gray-700 pl-4">
+                    <div key={idx}>
                       <h3 className="text-lg font-dikhaod">{topic.name}</h3>
-                      <p className="text-gray-300 mb-1">
+                      <p className="text-gray-300">
                         <strong>Definition:</strong> {topic.definition}
                       </p>
                       <p>

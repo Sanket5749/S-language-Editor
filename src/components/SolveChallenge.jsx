@@ -18,6 +18,7 @@ export default function SolveChallenge() {
   const [output, setOutput] = useState("");
   const [result, setResult] = useState("");
   const [copied, setCopied] = useState(false);
+  const [solved, setSolved] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => setShowSplash(false), 2000);
@@ -33,6 +34,7 @@ export default function SolveChallenge() {
           out.trim() === challenge.expectedOutput.trim()
         ) {
           setResult("✅ Correct output!");
+          setSolved(true);
         } else {
           setResult("❌ Wrong output, try again.");
         }
@@ -60,13 +62,16 @@ export default function SolveChallenge() {
     <div>
       {showSplash && <SplashScreen />}
       {!showSplash && (
-        <div className="min-h-screen bg-black text-white p-6 font-mono">
+        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white p-6 font-mono">
           <h2 className="text-3xl font-bold text-blue-400 mb-2">
             Level {challenge.level}: {challenge.title}
           </h2>
           <p className="mb-2">{challenge.task}</p>
           <p className="text-gray-400 mb-2">
-           Hint: {challenge.hint}
+            Hint: {challenge.hint}
+          </p>
+          <p className="text-gray-400 mb-2 d-flex">
+            Solved:{(solved) ? <span>✅</span> : <span>❌</span>}
           </p>
           <p className="text-gray-400 mb-2">
             Expected Output: {challenge.expectedOutput}
@@ -93,7 +98,7 @@ export default function SolveChallenge() {
           </button>
 
           <h3 className="mt-3 text-lg">Output:</h3>
-          <pre className="w-full p-4 mt-2 bg-gray-800 text-green-400 rounded shadow-inner whitespace-pre-wrap">
+          <pre className="w-full p-4 mt-2 bg-gray-900 border border-gray-700 text-green-400 rounded shadow-inner whitespace-pre-wrap">
             {output}
           </pre>
 
