@@ -8,11 +8,12 @@ export default function Footer() {
     {
       profilePic:
         "https://tse3.mm.bing.net/th/id/OIP.WkuGv4-iR5uPKZFcs7UjvAHaHs?pid=Api&P=0&h=180",
-      name: "Vivek Pawar",
-      role: "Team Leader",
-      github: "add github url of your account",
-      linkedin: "add linkedin url of your account",
-    }
+      name: "Sanket Patil",
+      role: "Developer",
+      github: "https://github.com/Sanket5749",
+      linkedin:
+        "https://www.linkedin.com/in/sanket-patil-32142232a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },
   ];
 
   return (
@@ -23,11 +24,11 @@ export default function Footer() {
             onClick={() => setShowTeam(!showTeam)}
             className="text-xl hover:text-blue-500 transition-colors"
           >
-            {showTeam ? "Hide Team" : "Developed By"}
+            {showTeam ? "Hide Devloper" : "Developed By"}
           </button>
 
           {showTeam && (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6 w-full">
+            <div className="grid grid-cols-1 w-full">
               {teamMembers.map((member, index) => (
                 <div
                   key={index}
@@ -73,3 +74,4 @@ export default function Footer() {
     </div>
   );
 }
+
