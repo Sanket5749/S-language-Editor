@@ -66,7 +66,7 @@ export default function Footer() {
             </div>
           )}
 
-          <div className="text-sm text-gray-400 mt-6">
+          <div className="text-sm text-gray-400 mt-2">
             © {new Date().getFullYear()} SLANG Editor. All rights reserved.
           </div>
         </div>
@@ -74,6 +74,7 @@ export default function Footer() {
     </div>
   );
 }
+
 
 
 
