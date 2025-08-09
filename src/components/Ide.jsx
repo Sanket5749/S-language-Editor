@@ -8,7 +8,7 @@ function SplashScreen() {
 }
 
 export default function Ide() {
-  const [code, setCode] = useState(`// Write your ARCLANG code here`);
+  const [code, setCode] = useState(`// Write your SLANG code here`);
   const [output, setOutput] = useState("");
   const [showSplash, setShowSplash] = useState(true);
   const [copied, setCopied] = useState(false);
@@ -84,3 +84,4 @@ export default function Ide() {
     </div>
   );
 }
+
