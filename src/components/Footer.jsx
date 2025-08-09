@@ -28,11 +28,11 @@ export default function Footer() {
           </button>
 
           {showTeam && (
-            <div className="grid grid-cols-1 w-full">
+            <div className="grid grid-cols-1">
               {teamMembers.map((member, index) => (
                 <div
                   key={index}
-                  className="bg-gray-800 p-6 rounded-lg shadow-lg hover:transform hover:scale-105 transition-all duration-300 place-content-center"
+                  className="bg-gray-800 p-6 rounded-lg shadow-lg hover:transform hover:scale-101 transition-all duration-300 place-content-center"
                 >
                   <img
                     src={member.profilePic}
@@ -74,4 +74,5 @@ export default function Footer() {
     </div>
   );
 }
+
 
