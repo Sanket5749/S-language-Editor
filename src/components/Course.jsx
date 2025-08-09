@@ -17,7 +17,7 @@ const modules = [
         definition:
           "Declare variables for storing numbers, strings, or arrays.",
         syntax: "`banao x = 10;`",
-        example: '`banao name = "ARCLANG";`',
+        example: '`banao name = "SLANG";`',
       },
     ],
   },
@@ -42,7 +42,7 @@ const modules = [
         definition:
           "Join multiple strings or variables using the `+` operator.",
         syntax: '`dikhao "Hello, " + name;`',
-        example: '`dikhao name + " is learning ARCLANG";`',
+        example: '`dikhao name + " is learning SLANG";`',
       },
     ],
   },
@@ -107,7 +107,7 @@ const modules = [
         definition:
           "Define reusable logic blocks using `kaam` and call them with parameters.",
         syntax: '`kaam greet(person) { dikhao "Hi, " + person; }`',
-        example: '`greet("ARCLANG");`',
+        example: '`greet("SLANG");`',
       },
     ],
   },
@@ -161,3 +161,4 @@ export default function Course() {
     </div>
   );
 }
+
